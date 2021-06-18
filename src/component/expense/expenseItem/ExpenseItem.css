@@ -34,6 +34,10 @@
   padding: 0.5rem;
   border-radius: 12px;
 }
+.fa-minus-circle {
+  font-size: 1.2rem;
+  color: white;
+}
 
 @media (min-width: 580px) {
   .expense-item__description {

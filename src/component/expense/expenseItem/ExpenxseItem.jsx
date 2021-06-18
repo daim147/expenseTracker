@@ -9,6 +9,10 @@ export const ExpenseItem = (props) => {
       <div className="expense-item__description ">
         <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
+        <i
+          onClick={() => props.handler(props.date)}
+          className=" fas fa-minus-circle"
+        ></i>
       </div>
     </Card>
   );

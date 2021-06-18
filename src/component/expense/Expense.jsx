@@ -17,6 +17,7 @@ export default function Expense(props) {
     console.log(e.target.value, "value");
     setYear(e.target.value);
   }
+
   return (
     <Card className="expenses">
       <ExpensesFilter
@@ -31,6 +32,7 @@ export default function Expense(props) {
             <ExpenseItem
               key={exp.id}
               date={exp.date}
+              handler={props.remove}
               title={exp.title}
               amount={exp.amount}
             />
