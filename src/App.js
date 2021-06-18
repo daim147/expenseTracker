@@ -61,7 +61,6 @@ function App() {
       prev.splice(index, 1);
       return [...prev];
     });
-    console.log(expenseData);
   }
   // ! it will call saveLocal when ever component got render
   useEffect(saveLocal);
