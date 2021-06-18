@@ -75,8 +75,6 @@ export default function From(props) {
             type="date"
             value={inputData.date}
             id="date"
-            min="2019-01-01"
-            max="2022-12-31"
           />
         </div>
       </div>

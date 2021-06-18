@@ -12,13 +12,18 @@ export default function Expense(props) {
   let filteredData = props.data.filter((data) =>
     data.date.getFullYear().toString().includes(`${year}`)
   );
-  function filterData({ target: { value } }) {
+  function filterData(e) {
     // ! here the value of year is setted not this is defualt value of year even we render the component
-    setYear(value);
+    console.log(e.target.value, "value");
+    setYear(e.target.value);
   }
   return (
     <Card className="expenses">
-      <ExpensesFilter filterHandler={filterData} />
+      <ExpensesFilter
+        filterHandler={filterData}
+        data={props.data}
+        selected={year}
+      />
       <ExpenseChart data={filteredData} />
       {filteredData[0] ? (
         filteredData.map((exp) => {
